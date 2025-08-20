@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cmd{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .d{
+            height: 400px;
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="cmd"></div>
+     
+
+
+
+    <script>
+        let cnt =document.getElementById("cmd")
+        console.log(cnt)
+        let allusers=" "
+
+    async function fetchData(url) {
+    let  response=await fetch(url)
+    try{ 
+        let data=await response.json()
+        console.log(data)
+        allusers=data.users
+        let jsonData=JSON.stringify(allusers)
+         
+        DisplayData(data)
+    }
+    catch(err){
+        console.log(err)
+    }
+    
+}
+        fetchData("https://jsonplaceholder.typicode.com/users/")
+        function DisplayData(p){
+            console.log(p)
+            let input=" "
+            p.map((val)=>{
+                console.log(val)
+                let uid = val.id;
+                let name= val.name;
+                let usern=val.username
+                let email =val.email
+                let phone=val.phone
+                let website=val.website
+                input+=`
+                <div class="d">s
+            <div>${val.id}</div>
+             <div>${val.name}</div>
+            <div>${val.usern}</div>
+             <div>${val.email}</div>
+            </div>
+                `
+
+            })
+            console.log(input)
+           cnt.innerHTML=input;
+
+        }
+        
+    </script>
+</body>
+</html>
