@@ -1,68 +1,181 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="icon" type="https://cdn-icons-png.freepik.com/256/11371/11371417.png?ga=GA1.1.1255615069.1661957002&semt=ais_hybrid/x-icon" href="https://cdn-icons-png.freepik.com/256/11371/11371417.png?ga=GA1.1.1255615069.1661957002&semt=ais_hybrid">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Have a nice day!</title> 
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <link rel="icon" type="image/x-icon" 
+        href="https://cdn-icons-png.freepik.com/256/11371/11371417.png">
 
-   
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: black;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+    }
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Have a nice day!</title>
-  </head>
-  <body>
-     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
-
-    <!-- navbar start -->
-    <navbar>
-         
-  
-          <div class='w-full py-3 border-b bg-black flex justify-between px-20 xl:gap-15  items-center font-semibold'>
-            
-              <h1 class="text-2xl">
-                 <img src="https://cdn-icons-png.freepik.com/256/11371/11371417.png?ga=GA1.1.1255615069.1661957002&semt=ais_hybrid" alt="" 
-                 style="height:50px; width: 80px;">
-              </h1>
-            
-            <div class='flex   text-white  gap-10'>
-              <a href="">Home</a>
-              <a href="About Us.html">About</a>
-              <a href="Menu.html">Menu</a>
-              <a href="Product.html">Product</a>
-              <a href="Contact.html">Contact</a>
-              <a href="Cart.html">Cart</a>
-            </div>
-             
-          </div>
-          
-         
-      </navbar>
-      <!-- navbarend -->
-
-
-      <!-- card -->
-      <div class="card bg-dark text-white  " style="height:600px;width: 100%;">
-        <img src="https://wallsdesk.com/wp-content/uploads/2016/10/Coffee-HD-Background.jpg" class="card-img" alt="..."style="height:630px;width: 100%;">
-        <div class="card-img-overlay position-absolute top-50 start-40 translate-middle-y ">
-          <h1 class="card-title fs-1 fw-bold  ">  FRESH COFFEE IN THE MORNING</h1>
-          <p class="card-text  fw-bold"> Your cozy destination for handcrafted cofee, fresh flavors,<br> and a warm atmosphere to savor sip. </p>
-           <a href="Contact.html">          <button type="button" class="btn btn-danger position-absolute top-50 start-40 translate-middle-x"  > Get in Touch</button>
-           </a>
-         </div>
-        
-      </div>
-
+    .skip-link:focus {
+      top: 0;
+    }
  
-       <!-- end card-->
-         
-  </body>
+    a:focus, button:focus {
+      outline: 3px solid yellow;
+      outline-offset: 3px;
+    }
+    
+  </style>
+</head>
+
+<body class="pt-20">
+   
+  <a href="#main-content" class="skip-link">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
+  <header>
+   
+<!-- Navbar -->
+<nav class="bg-black fixed w-full top-0 left-0 z-50">
+  <div class="flex justify-between items-center px-6 py-3"> 
+    <img src="https://cdn-icons-png.freepik.com/256/11371/11371417.png"
+         alt="Coffee Shop Logo"
+         class="h-10 w-14"> 
+    <button id="menu-btn" class="text-white md:hidden text-2xl">
+      ☰
+    </button> 
+    <div id="menu"
+          class="hidden md:flex flex-col md:flex-row text-white gap-10 
+                absolute md:static top-16 left-0 w-full md:w-auto 
+                bg-black md:bg-transparent text-center py-6 md:py-0 space-x-2">
+
+      <a href="#">Home</a>
+      <a href="About Us.html">About</a>
+      <a href="Menu.html">Menu</a>
+      <a href="Contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="Cart.html">Cart</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- JS for Toggle -->
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
+<style>
+  body {
+    padding-top: 80px;
+  }
+</style>
+
+
+<style>
+  body {
+    padding-top: 50px;
+  }
+</style>
+
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content"> 
+    <section aria-labelledby="hero-heading" class="relative">
+      <img src="https://wallsdesk.com/wp-content/uploads/2016/10/Coffee-HD-Background.jpg"
+           alt="Fresh coffee cup on wooden table" class="w-full h-[630px] object-cover" aria-hidden="true">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
+
+        <h2 id="hero-heading" class="text-5xl fw-bold mb-4">
+          FRESH COFFEE IN THE MORNING
+        </h2>
+        <p class="fs-5 mb-4">
+          Your cozy destination for handcrafted coffee, fresh flavors,
+          and a warm atmosphere to savor every sip.
+        </p>
+
+        <a href="login.html"
+           class="btn btn-danger"
+           aria-label="Get in touch with our coffee shop">
+          Get in Touch
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<!-- FOOTER -->
+<footer class="bg-body-tertiary text-center mt-5">
+  <div class="container p-4 pb-0">
+
+    <section class="mb-4" aria-label="Social Media Links">
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #3b5998;"
+         href="#!"
+         aria-label="Facebook">
+         <i class="bi bi-facebook"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #55acee;"
+         href="#!"
+         aria-label="Twitter">
+         <i class="bi bi-twitter"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #dd4b39;"
+         href="#!"
+         aria-label="Google">
+         <i class="bi bi-google"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #ac2bac;"
+         href="#!"
+         aria-label="Instagram">
+         <i class="bi bi-instagram"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #0082ca;"
+         href="#!"
+         aria-label="LinkedIn">
+         <i class="bi bi-linkedin"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #333333;"
+         href="#!"
+         aria-label="GitHub">
+         <i class="bi bi-github"></i>
+      </a>
+
+    </section>
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0,0,0,0.05);">
+    © 2026 Copyright:
+    <span class="text-body">Sana Yadav</span>
+  </div>
+</footer>
 </html>

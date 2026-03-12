@@ -1,0 +1,21 @@
+ 
+/* Mobile devices */
+@media (max-width: 768px) {
+  nav div {
+    flex-direction: column;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    gap: 15px;
+  }
+
+  nav div div {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav img {
+    height: 40px;
+    width: 60px;
+  }
+} 

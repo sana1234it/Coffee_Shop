@@ -1,72 +1,201 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="icon" type="https://cdn-icons-png.freepik.com/256/11371/11371417.png?ga=GA1.1.1255615069.1661957002&semt=ais_hybrid/x-icon" href="https://cdn-icons-png.freepik.com/256/11371/11371417.png?ga=GA1.1.1255615069.1661957002&semt=ais_hybrid">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Have a nice day!</title> 
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
+  <link rel="icon" type="image/x-icon"
+        href="https://cdn-icons-png.freepik.com/256/11371/11371417.png">
 
+  <style>
+    a:focus, button:focus {
+      outline: 3px solid yellow;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<body class="pt-20">
+ 
+<header>
+ <!-- Navbar -->
+<nav class="bg-black fixed w-full top-0 left-0 z-50">
+  <div class="flex justify-between items-center px-6 py-3">
+    <img src="https://cdn-icons-png.freepik.com/256/11371/11371417.png"
+         alt="Coffee Shop Logo"
+         class="h-10 w-14">
+ 
+    <button id="menu-btn" class="text-white md:hidden text-2xl">
+      ☰
+    </button> 
+    <div id="menu"
+         class="hidden md:flex flex-col md:flex-row text-white gap-6 
+                absolute md:static top-16 left-0 w-full md:w-auto 
+                bg-black md:bg-transparent text-center py-6 md:py-0 space-x-2">
 
-    <title>Have a nice day!</title>
-  </head>
-  <body>
-<!-- navbar start -->
-<navbar>
-         
-  
-  <div class='w-full py-3 border-b bg-black flex justify-between px-20 xl:gap-15  items-center font-semibold'>
-    
-      <h1 class="text-2xl">
-         <img src="https://cdn-icons-png.freepik.com/256/11371/11371417.png?ga=GA1.1.1255615069.1661957002&semt=ais_hybrid" alt="" 
-         style="height:50px; width: 80px;">
-      </h1>
-    
-    <div class='flex   text-white  gap-10'>
       <a href="index.html">Home</a>
-      <a href="About Us.html">About</a>
+      <a href="#">About</a>
       <a href="Menu.html">Menu</a>
-      <a href="Product.html">Product</a>
       <a href="Contact.html">Contact</a>
+      <a href="login.html">Login</a>
       <a href="Cart.html">Cart</a>
     </div>
-     
+
   </div>
-  
+</nav>
  
-</navbar>
-<div class="card mb-3" style="max-width: 100%">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img
-          src="https://purepng.com/public/uploads/large/purepng.com-coffee-cupfood-objects-cup-coffee-mug-tea-caffeine-941524635605tpevl.png"
-          alt="Trendy Pants and Shoes"
-          class="img-fluid rounded-start"
-          style="height: 500px; width: 100%;"
-        />
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title text-secondary fs-1 fw-bold ">About Us</h5>
-          <p class="card-text">
-            Welcome to fresh Cafe, your go-to online destination for premium coffee delivered straight to your door. We believe that coffee should be more than just a drink – it’s an experience. From the moment you open your bag of freshly roasted beans to the first comforting sip, we want every cup to be a moment of joy.<br>
 
-Our beans are carefully sourced from sustainable farms around the world, roasted to perfection, and packaged with love. Whether you're a fan of bold dark roasts, smooth light brews, or something in between, we offer a variety of blends and single-origin coffees to suit every taste.<br>
+<style>
+  body {
+    padding-top: 80px;
+  }
+</style>
 
-At fresh cafe, we're passionate about quality, convenience, and community. That's why we provide an easy-to-navigate online store, fast shipping, and customer service that feels like family. Whether you’re brewing your morning cup or sharing a pot with friends, we’re here to make every coffee moment special.
+</header>
+ 
+<main class="container mt-5 pt-5">
 
-Join us on this flavorful journey and elevate your daily ritual with coffee that’s crafted with care.
-<button type="button" class="btn btn-danger position-absolute top-80 start-50  "  > Read More</button>
-          </p>
-           
+  <section aria-labelledby="about-heading">
+    <div class="card mb-3" style="max-width: 100%">
+      <div class="row g-0">
+
+        <div class="col-md-4">
+          <img
+            src="https://purepng.com/public/uploads/large/purepng.com-coffee-cupfood-objects-cup-coffee-mug-tea-caffeine-941524635605tpevl.png"
+            alt="Coffee cup"
+            class="img-fluid rounded-start"
+            style="height: 500px; width: 100%;">
         </div>
+
+        <div class="col-md-8">
+          <div class="card-body">
+
+            <h2 id="about-heading" class="card-title text-secondary fs-1 fw-bold">
+              About Us
+            </h2>
+
+            <p class="card-text">
+              Welcome to Fresh Cafe, your go-to online destination for premium coffee delivered straight to your door.
+              We believe that coffee should be more than just a drink – it’s an experience. <br>
+              Coffee is not just what we serve — it’s what we feel. From the first aroma in the morning to the last warm sip at night, every cup is made with care, comfort, and a little bit of love.
+
+Our coffee shop is a cozy corner where conversations grow, laughter echoes, and memories are brewed daily. We choose our beans carefully and craft each drink slowly, so you can pause, relax, and truly enjoy the moment.
+             <br>Whether you come alone with your thoughts or with friends to share stories, we’re here to make you feel at home — one warm cup at a time. <span id="dots">...</span> <br> <br>
+              
+
+              <span id="more" hidden>
+                From the first rich scent of freshly ground beans to the last soothing sip, we create experiences that feel like home. Whether you're catching up with friends, working on your dreams, or simply enjoying a quiet moment, our space is designed to make you feel cozy, relaxed, and cared for.
+
+Every cup is brewed with passion, love, and attention to detail — because you deserve more than just coffee. You deserve a comforting experience. ☕✨
+              </span>
+            </p>
+
+            <button onclick="myFunction()"
+                    id="myBtn"
+                    class="btn btn-primary"
+                    aria-expanded="false"
+                    aria-controls="more">
+              Read More
+            </button>
+
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-body-tertiary text-center mt-5">
+  <div class="container p-4 pb-0">
+
+    <section class="mb-4" aria-label="Social Media Links">
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #3b5998;"
+         href="#!"
+         aria-label="Facebook">
+         <i class="bi bi-facebook"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #55acee;"
+         href="#!"
+         aria-label="Twitter">
+         <i class="bi bi-twitter"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #dd4b39;"
+         href="#!"
+         aria-label="Google">
+         <i class="bi bi-google"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #ac2bac;"
+         href="#!"
+         aria-label="Instagram">
+         <i class="bi bi-instagram"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #0082ca;"
+         href="#!"
+         aria-label="LinkedIn">
+         <i class="bi bi-linkedin"></i>
+      </a>
+
+      <a class="btn btn-floating m-1 text-white"
+         style="background-color: #333333;"
+         href="#!"
+         aria-label="GitHub">
+         <i class="bi bi-github"></i>
+      </a>
+
+    </section>
   </div>
-  </body>
-  </html>
+
+  <div class="text-center p-3" style="background-color: rgba(0,0,0,0.05);">
+    © 2026 Copyright:
+    <span class="text-body">Sana Yadav</span>
+  </div>
+</footer>
+
+<!--   SCRIPT -->
+<script>
+  // toogle
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  var expanded = btnText.getAttribute("aria-expanded") === "true";
+
+  btnText.setAttribute("aria-expanded", !expanded);
+
+  if (expanded) {
+    dots.style.display = "inline";
+    moreText.hidden = true;
+    btnText.innerHTML = "Read More";
+  } else {
+    dots.style.display = "none";
+    moreText.hidden = false;
+    btnText.innerHTML = "Read Less";
+  }
+}
+</script>
+
+</body>
+</html>
